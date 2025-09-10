@@ -1,6 +1,6 @@
 "use client"
 
-import { SkipBack, SkipForward, Play, Pause } from "lucide-react"
+import { ArrowBigLeftDash, ArrowBigRightDash, PlayCircle, PauseCircle } from "lucide-react"
 import { LineSpinner } from "ldrs/react"
 import type { Song } from "@/lib/types"
 
@@ -36,7 +36,7 @@ export function AudioControls({
         aria-label="Canción anterior"
         disabled={!canGoPrevious || isLoading}
       >
-        <SkipBack size={16} />
+        <ArrowBigLeftDash size={16} />
       </button>
 
       {/* Botón principal play/pause */}
@@ -49,9 +49,9 @@ export function AudioControls({
         {isLoading ? (
           <LineSpinner size={20} color="white" />
         ) : isPlaying ? (
-          <Pause size={16} />
+          <PauseCircle size={16} />
         ) : (
-          <Play size={16} />
+          <PlayCircle size={16} />
         )}
       </button>
 
@@ -62,7 +62,7 @@ export function AudioControls({
         aria-label="Siguiente canción"
         disabled={!canGoNext || isLoading}
       >
-        <SkipForward size={16} />
+        <ArrowBigRightDash size={16} />
       </button>
     </div>
   )

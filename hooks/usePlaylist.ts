@@ -7,6 +7,15 @@ import type { Song, PlaylistState, LyricData } from "@/lib/types"
 import { loadLRCFile } from "@/lib/utils/lrcParser"
 
 const defaultSongs: Song[] = [
+  
+  {
+    id: "Love Story",
+    title: "Love Story",
+    artist: "Indila",
+    lrcFile: "/lyrics/Love_Story_Indila.lrc",
+    audioFile: "/sound/Love_Story_Indila.mp3"
+  },
+
   {
     id: "Next To You",
     title: "Next To You",
@@ -56,9 +65,9 @@ export function usePlaylist(audioRef: React.RefObject<HTMLAudioElement>) {
     setPlaylist((prev) => ({ ...prev, isLoading: true }))
 
     try {
-      console.log("Cargando letras desde:", song.lrcFile) // Para debug
+      // console.log("Cargando letras desde:", song.lrcFile) // Para debug
       const lyrics = await loadLRCFile(song.lrcFile)
-      console.log("Letras cargadas:", lyrics) // Para debug
+      // console.log("Letras cargadas:", lyrics) // Para debug
       setCurrentLyrics(lyrics)
     } catch (error) {
       console.error("Error loading lyrics:", error)
