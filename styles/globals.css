@@ -1924,9 +1924,9 @@ body {
 }
 
 .toast-lyrics .toast-content {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 500;
-  font-style: italic;
+  font-style: normal;
 }
 
 .toast-title .toast-content {
