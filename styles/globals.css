@@ -2007,50 +2007,6 @@ body {
   animation: slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Responsive para toast */
-@media (max-width: 768px) {
-  .toast-notification {
-    top: 15px;
-    right: 15px;
-    left: 15px;
-    max-width: none;
-    min-width: auto;
-  }
-
-  .toast-toggle-btn {
-    right: 15px;
-    width: 44px;
-    height: 44px;
-  }
-
-  .toast-content {
-    font-size: clamp(12px, 3.5vw, 14px);
-  }
-}
-
-@media (max-width: 480px) {
-  .toast-notification {
-    top: 10px;
-    right: 10px;
-    left: 10px;
-  }
-
-  .toast-toggle-btn {
-    right: 10px;
-    width: 40px;
-    height: 40px;
-  }
-
-  .toast-header {
-    padding: 10px 12px 6px 12px;
-  }
-
-  .toast-content {
-    padding: 10px 12px 12px 12px;
-    font-size: clamp(11px, 4vw, 13px);
-  }
-}
-
 /* Efectos de hover mejorados */
 .toast-notification:hover {
   transform: translateY(-2px);
@@ -3244,6 +3200,23 @@ body {
 }
 
 /* Media queries mejoradas */
+@media (max-width: 1024px) {
+  .flowers {
+    transform: scale(clamp(0.4, 2vw, 0.7));
+    bottom: 2vmin;
+  }
+  .small-flower{
+    bottom: 5vmin;
+  }
+
+.field-grass,
+.long-field-grass,
+.extra-small-grass,
+.background-grass {
+  bottom: 12vmin;
+}
+}
+
 @media (max-width: 768px) {
   .flowers {
     transform: scale(clamp(0.4, 2vw, 0.7));
@@ -3269,12 +3242,30 @@ body {
     max-width: 150px;
     font-size: 9px;
   }
+  
+  .toast-notification {
+    top: 15px;
+    right: 15px;
+    left: 15px;
+    max-width: none;
+    min-width: auto;
+  }
+
+  .toast-toggle-btn {
+    right: 15px;
+    width: 44px;
+    height: 44px;
+  }
+
+  .toast-content {
+    font-size: clamp(12px, 3.5vw, 14px);
+  }
 }
 
 @media (max-width: 480px) {
   .flowers {
     transform: scale(clamp(0.3, 2.5vw, 0.6));
-    bottom: 2.5vmax;
+    bottom: 2vmin;
     left: -3vmin;
   }
 
@@ -3296,6 +3287,63 @@ body {
   .toast-song-title {
     max-width: 120px;
     font-size: 8px;
+  }
+
+  .toast-notification {
+    top: 10px;
+    right: 10px;
+    left: 10px;
+  }
+
+  .toast-toggle-btn {
+    right: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .toast-header {
+    padding: 10px 12px 6px 12px;
+  }
+
+  .toast-content {
+    padding: 10px 12px 12px 12px;
+    font-size: clamp(11px, 4vw, 13px);
+  }
+}
+
+/* Media query para 411px */
+@media (max-width: 411px) {
+  .flowers {
+    transform: scale(clamp(0.28, 2.3vw, 0.55));
+    bottom: 1.8vmax;
+    left: -3.5vmin;
+  }
+}
+
+/* Media query para 384px */
+@media (max-width: 384px) {
+  .flowers {
+    transform: scale(clamp(0.25, 2.1vw, 0.5));
+    bottom: 1.6vmax;
+    left: -4vmin;
+  }
+}
+
+/* Media query para 360px */
+@media (max-width: 360px) {
+  .flowers {
+    transform: scale(clamp(0.22, 1.9vw, 0.45));
+    bottom: 1.4vmax;
+    left: -4.5vmin;
+  }
+}
+
+/* Media query adicional para pantallas muy pequeñas */
+@media (max-width: 320px) {
+  .flowers {
+    transform: scale(clamp(0.2, 1.7vw, 0.4));
+    bottom: 1.2vmax;
+    left: -5vmin;
   }
 }
 
