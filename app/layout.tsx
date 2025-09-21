@@ -5,8 +5,8 @@ import 'ldrs/react/Mirage.css'
 import 'ldrs/react/LineSpinner.css'
 
 export const metadata: Metadata = {
-  title: 'Peonias by Write_Color',
-  description: 'Creado con amor y weba por Write_Color',
+  title: 'Florecitas 🌸?? :0',
+  description: 'Creado con amor y weba por mí pendeja, quien más?',
   icons: {
     icon: '/peonia.svg'
   },

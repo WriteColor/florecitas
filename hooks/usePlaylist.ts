@@ -31,7 +31,7 @@ const defaultSongs: Song[] = [
     audioFile: "/sound/Flowers_Christian_Basso_&_Haien_Qiu.mp3",
     lrcFile: "/lyrics/Flowers_Christian_Basso_&_Haien_Qiu.lrc",
   },
-/*   {
+  {
     id: "Il bambino che contava le stelle",
     title: "Il bambino che contava le stelle",
     artist: "Ultimo",
@@ -44,7 +44,7 @@ const defaultSongs: Song[] = [
     artist: "Andrés Calamaro",
     audioFile: "/sound/Flaca_Andres_Calamaro.mp3",
     lrcFile: "/lyrics/Flaca_Andres_Calamaro.lrc",
-  }, */
+  },
 ]
 
 export function usePlaylist(audioRef: React.RefObject<HTMLAudioElement>) {

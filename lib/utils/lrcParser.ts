@@ -4,7 +4,7 @@ export function parseLRC(lrcContent: string): LyricData[] {
   const lines = lrcContent.split("\n")
   const lyrics: LyricData[] = []
 
-  // Regex pa’ agarrar los tiempos tipo [mm:ss.xx] o [mm:ss]
+  // Regex pa' agarrar los tiempos tipo [mm:ss.xx] o [mm:ss]
   const timeRegex = /\[(\d{1,2}):(\d{2})(?:\.(\d{1,3}))?\]/g
 
   lines.forEach((line) => {
@@ -21,16 +21,15 @@ export function parseLRC(lrcContent: string): LyricData[] {
       // Sacar el texto que queda después del tiempo
       const text = line.replace(timeRegex, "").trim()
 
-      if (text && text.length > 0) {
-        lyrics.push({
-          time: totalSeconds,
-          text: text,
-        })
-      }
+      // Ahora permitimos líneas vacías para silencios
+      lyrics.push({
+        time: totalSeconds,
+        text: text, // Puede ser vacío pa' los silencios
+      })
     })
   })
 
-  // Ordenamos pa’ que vayan al toque
+  // Ordenamos pa' que vayan al toque
   return lyrics.sort((a, b) => a.time - b.time)
 }
 

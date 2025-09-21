@@ -1,36 +1,36 @@
 export const translations = {
   es: {
     welcome: {
-      hi: "¡Hola!",
-      desc: "Esta es una pequeña página de flores (Peonías o un intento de estas)",
-      button: "Adelante",
+      hi: "¡Hola vieja 😪!",
+      desc: "Primero que todo, Feliz 21 de Septiembre... Como se que te gustan las flores, traté de hacer algunas de tus favoritas 🌸 (...o al menos un intento de ellas jeje😂). Solo espero que te guste este pequeño detallito, sino pues que te jalen las patas todas las noches 😒. [Pa que no seas expectadora] [Te recomiendo verlo en la compu]",
+      button: "Adelante! 😗",
     },
     flower: {
       noLyrics:
-        "Esta Página La Trasladé De HTML Y CSS Puro A React Con Next.js. Mira el código aquí:",
+        "Hola de nuevo... quiero que sepas algunas cositas, no muchas, y para eso dale Play a la musiquita (eemmm puedes bajar el volumen por si lo tienes alto y NO critiques mi elección de canciones 😒) Solo ponte a leer, hare que sea lento para que no te mates leyendo y podas entender jeje",
       noAudio: "Tu pinchi navegador no soporta el elemento de audio.",
     },
     toast: {
-      playing: "Reproduciendo",
+      playing: "Escuchando",
       message: "Mensaje",
       noSong: "¿Dejo el reproductor o a la vrg?",
     },
   },
   en: {
     welcome: {
-      hi: "Hi!",
-      desc: "This is a small page of flowers (Peonies or an attempt at them)",
-      button: "Go for it",
+      hi: "¡Hola vieja 😪!",
+      desc: "Primero que todo, Feliz 21 de Septiembre... Como se que te gustan las flores, traté de hacer algunas de tus favoritas 🌸 (...o al menos un intento de ellas jeje😂). Solo espero que te guste este pequeño detallito, sino pues que te jalen las patas todas las noches 😒. [Pa que no seas expectadora] [Te recomiendo verlo en la compu]",
+      button: "Adelante! 😗",
     },
     flower: {
       noLyrics:
-        "I migrated this page from pure HTML & CSS to React with Next.js. See the code here:",
-      noAudio: "Your damn browser doesn’t support the audio element.",
+        "Hola de nuevo... quiero que sepas algunas cositas, no muchas, y para eso dale Play a la musiquita (eemmm puedes bajar el volumen por si lo tienes alto y NO critiques mi elección de canciones 😒) Solo ponte a leer, hare que sea lento para que no te mates leyendo y podas entender jeje",
+      noAudio: "Tu pinchi navegador no soporta el elemento de audio.",
     },
     toast: {
-      playing: "Now Playing",
-      message: "Message",
-      noSong: "Should I leave the player or ditch it?",
+      playing: "Escuchando",
+      message: "Mensaje",
+      noSong: "¿Dejo el reproductor o a la vrg?",
     },
   },
 } as const

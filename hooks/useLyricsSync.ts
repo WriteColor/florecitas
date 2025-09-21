@@ -14,7 +14,7 @@ export function useLyricsSync(
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
-    // Quitamos cualquier intervalo anterior pa’ no hacer bulto
+    // Quitamos cualquier intervalo anterior pa' no hacer bulto
     if (intervalRef.current) {
       clearInterval(intervalRef.current)
     }
@@ -26,13 +26,13 @@ export function useLyricsSync(
       return
     }
 
-    console.log(`Sincronizando letras: ${lyricsData.length} líneas disponibles`)
+    // console.log(`Sincronizando letras: ${lyricsData.length} líneas disponibles`)
 
     const updateLyrics = () => {
       if (!audioRef.current) return
 
       const currentTime = audioRef.current.currentTime
-      // Buscamos qué letra toca pa’ mostrar
+      // Buscamos qué letra toca pa' mostrar
       let currentLine: LyricData | null = null
 
       for (let i = 0; i < lyricsData.length; i++) {
@@ -46,15 +46,22 @@ export function useLyricsSync(
       }
 
       if (currentLine) {
-        console.log(`Mostrando letra: "${currentLine.text}" en tiempo ${currentLine.time.toFixed(2)}s`)
+        // Si el texto está vacío, es un silencio
+        if (currentLine.text === "") {
+          // console.log(`Silencio en tiempo ${currentLine.time.toFixed(2)}s`)
+          setLyricOpacity(0)
+          setCurrentLyric("")
+        } else {
+          // console.log(`Mostrando letra: "${currentLine.text}" en tiempo ${currentLine.time.toFixed(2)}s`)
 
-        // Calculamos opacidad pa’ que la letra no salga de volada
-        const timeInLine = currentTime - currentLine.time
-        const fadeInDuration = 0.3
-        const opacity = Math.min(1, timeInLine / fadeInDuration)
+          // Calculamos opacidad pa' que la letra no salga de volada
+          const timeInLine = currentTime - currentLine.time
+          const fadeInDuration = 0.3
+          const opacity = Math.min(1, timeInLine / fadeInDuration)
 
-        setLyricOpacity(Math.max(0.7, opacity))
-        setCurrentLyric(currentLine.text)
+          setLyricOpacity(Math.max(0.7, opacity))
+          setCurrentLyric(currentLine.text)
+        }
       } else {
         setLyricOpacity(0)
         setCurrentLyric("")
@@ -64,8 +71,8 @@ export function useLyricsSync(
     // Actualizamos ya mismo, sin esperar
     updateLyrics()
 
-    // Ponemos intervalo pa’ que vaya actualizando sin perder ritmo
-    intervalRef.current = setInterval(updateLyrics, 100) // Más rápido pa’ que pegue justo
+    // Ponemos intervalo pa' que vaya actualizando sin perder ritmo
+    intervalRef.current = setInterval(updateLyrics, 100) // Más rápido pa' que pegue justo
 
     return () => {
       if (intervalRef.current) {
