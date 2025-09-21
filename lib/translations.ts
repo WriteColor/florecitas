@@ -2,7 +2,7 @@ export const translations = {
   es: {
     welcome: {
       hi: "¡Hola vieja 😪!",
-      desc: "Primero que todo, Feliz 21 de Septiembre... Como se que te gustan las flores, traté de hacer algunas de tus favoritas 🌸 (...o al menos un intento de ellas jeje😂). Solo espero que te guste este pequeño detallito, sino pues que te jalen las patas todas las noches 😒. [Pa que no seas expectadora]",
+      desc: "Primero que todo, Feliz 21 de Septiembre... Como se que te gustan las flores, traté de hacer algunas de tus favoritas 🌸 (...o al menos un intento de ellas jeje😂). Solo espero que te guste este pequeño detallito, sino pues que te jalen las patas todas las noches 😒. [Pa que no seas expectadora, y si, se que no son amarillas y parezca cursi pero que te valga v]",
       button: "Adelante! 😗",
     },
     flower: {
