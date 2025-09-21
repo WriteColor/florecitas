@@ -1,9 +1,9 @@
 export const translations = {
   es: {
     welcome: {
-      hi: "¡Hola vieja 😪!",
-      desc: "Primero que todo, Feliz 21 de Septiembre... Como se que te gustan las flores, traté de hacer algunas de tus favoritas 🌸 (...o al menos un intento de ellas jeje😂). Solo espero que te guste este pequeño detallito, sino pues que te jalen las patas todas las noches 😒. [Pa que no seas expectadora]",
-      button: "Adelante! 😗",
+      hi: "¡Hola!",
+      desc: "Esta es una pequeña página de flores (Peonías o un intento de estas)",
+      button: "Adelante",
     },
     flower: {
       noLyrics:
@@ -18,9 +18,9 @@ export const translations = {
   },
   en: {
     welcome: {
-      hi: "¡Hola vieja 😪!",
-      desc: "Primero que todo, Feliz 21 de Septiembre... Como se que te gustan las flores, traté de hacer algunas de tus favoritas 🌸 (...o al menos un intento de ellas jeje😂). Solo espero que te guste este pequeño detallito, sino pues que te jalen las patas todas las noches 😒. [Pa que no seas expectadora]",
-      button: "Adelante! 😗",
+      hi: "Hi!",
+      desc: "This is a small page of flowers (Peonies or an attempt at them)",
+      button: "Go for it",
     },
     flower: {
       noLyrics:
