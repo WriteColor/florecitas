@@ -45,14 +45,14 @@ export function FlowerPage() {
     return (
       <span>
         {t("flower.noLyrics")}{" "}
-        <a
+        {/* <a
           href="https://github.com/WriteColor/florecitas"
           target="_blank"
           rel="noopener noreferrer"
           className="text-pink-200 underline"
         >
           GitHub
-        </a>
+        </a> */}
       </span>
     )
   }
