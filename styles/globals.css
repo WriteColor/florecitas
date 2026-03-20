@@ -339,7 +339,7 @@ body {
   transform: translate(-50%, -100%);
   width: 8vmin;
   height: 8vmin;
-  background-color: #ff69b4;
+  background-color: #ff0080;
   filter: blur(10vmin);
 }
 
@@ -454,7 +454,7 @@ body {
   z-index: 2;
 }
 
-.flower__white-circle {
+/* .flower__white-circle {
   position: absolute;
   left: -3.5vmin;
   top: -3vmin;
@@ -487,7 +487,7 @@ body {
       transparent 1px,
       transparent 12px
     ), linear-gradient(90deg, rgb(255, 240, 245), rgb(255, 182, 193));
-}
+} */
 
 .flower__line {
   height: 55vmin;
@@ -501,6 +501,7 @@ body {
 .flower__line__leaf {
   --w: 7vmin;
   --h: calc(var(--w) + 2vmin);
+  z-index: -1;
   position: absolute;
   top: 20%;
   left: 90%;
@@ -512,13 +513,13 @@ body {
 }
 
 .flower__line__leaf--1 {
-  transform: rotate(70deg) rotateY(30deg);
+  transform: rotate(80deg) rotateY(30deg);
   animation: blooming-leaf-right var(--fl-speed) 1.6s backwards;
 }
 
 .flower__line__leaf--2 {
   top: 45%;
-  transform: rotate(70deg) rotateY(30deg);
+  transform: rotate(80deg) rotateY(30deg);
   animation: blooming-leaf-right var(--fl-speed) 1.4s backwards;
 }
 
@@ -531,7 +532,7 @@ body {
   border-bottom-right-radius: var(--h);
   left: -460%;
   top: 12%;
-  transform: rotate(-70deg) rotateY(30deg);
+  transform: rotate(-80deg) rotateY(30deg);
   animation: blooming-leaf-left var(--fl-speed) 1.2s backwards;
 }
 
@@ -543,7 +544,7 @@ body {
 .flower__line__leaf--5 {
   top: 0;
   transform-origin: left;
-  transform: rotate(70deg) rotateY(30deg) scale(0.6);
+  transform: rotate(50deg) rotateY(30deg) scale(0.6);
   animation: blooming-leaf-right var(--fl-speed) 1.8s backwards;
 }
 
@@ -551,7 +552,7 @@ body {
   top: -2%;
   left: -450%;
   transform-origin: right;
-  transform: rotate(-70deg) rotateY(30deg) scale(0.6);
+  transform: rotate(-50deg) rotateY(30deg) scale(0.6);
   animation: blooming-leaf-left var(--fl-speed) 2s backwards;
 }
 
@@ -607,11 +608,10 @@ body {
 
 /* Hierba existente - SIN SOMBRAS */
 .flower__grass {
-  --c: #159faa;
+  --c: #00ff99;
   --line-w: 1.5vmin;
   position: absolute;
   bottom: 0vmin;
-  left: -4vmin;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -851,7 +851,7 @@ body {
   top: 6.5vmin;
 }
 
-.flower__g-front__leaf {
+/* .flower__g-front__leaf {
   width: 10vmin;
   height: 10vmin;
   border-radius: 100% 0% 0% 100% / 100% 100% 0% 0%;
@@ -859,7 +859,7 @@ body {
   background-image: linear-gradient(to bottom left, transparent, var(--dark-color)),
     linear-gradient(to bottom right, #159faa 50%, transparent 50%, transparent);
   mask-image: linear-gradient(to bottom right, #159faa 50%, transparent 50%, transparent);
-}
+} */
 
 .flower__g-fr {
   position: absolute;
@@ -870,14 +870,14 @@ body {
   animation: flower__g-fr-ans 2s linear infinite;
 }
 
-.flower__g-fr .leaf {
+/* .flower__g-fr .leaf {
   width: 30vmin;
   height: 50vmin;
   border-top-left-radius: 100%;
   border-left: 2vmin solid #079097;
   position: relative;
   z-index: 1;
-}
+} */
 
 .flower__g-fr__leaf {
   position: absolute;
@@ -1232,7 +1232,7 @@ body {
 }
 
 /* Centro blanco de las flores pequeñas */
-.small-flower__center {
+/* .small-flower__center {
   position: absolute;
   left: -1.75vmin;
   top: -1.5vmin;
@@ -1260,7 +1260,7 @@ body {
     ),
     repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.03) 0px, rgba(0, 0, 0, 0.03) 1px, transparent 1px, transparent 6px),
     linear-gradient(90deg, rgb(255, 240, 245), rgb(255, 182, 193));
-}
+} */
 
 .small-flower__stem {
   width: 0.8vmin;
@@ -2258,8 +2258,8 @@ body {
 }
 
 .butterfly__head {
-  width: 0.8vmin;
-  height: 0.8vmin;
+  width: 0vmin;
+  height: 1vmin;
   background: #2c1810;
   border-radius: 50%;
   position: relative;
@@ -2276,7 +2276,7 @@ body {
 }
 
 .butterfly__abdomen {
-  width: 0.4vmin;
+  width: 0.5vmin;
   height: 2vmin;
   background: linear-gradient(to bottom, #2c1810, #1a0f08);
   border-radius: 50%;
@@ -2335,7 +2335,7 @@ body {
 
 .butterfly__antennae {
   position: absolute;
-  top: 0.2vmin;
+  top: 0vmin;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -3201,7 +3201,7 @@ body {
 }
 
 /* Media queries mejoradas */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .flowers {
     transform: scale(clamp(0.4, 2vw, 0.7));
     bottom: 2vmin;
@@ -3216,9 +3216,9 @@ body {
 .background-grass {
   bottom: 12vmin;
 }
-}
+} */
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .flowers {
     transform: scale(clamp(0.4, 2vw, 0.7));
     bottom: 2.5vmax;
@@ -3261,7 +3261,7 @@ body {
   .toast-content {
     font-size: clamp(12px, 3.5vw, 14px);
   }
-}
+} */
 
 @media (max-width: 480px) {
   .flowers {

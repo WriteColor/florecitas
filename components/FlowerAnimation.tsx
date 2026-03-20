@@ -32,7 +32,7 @@ export function FlowerAnimation({ className = "" }: FlowerAnimationProps) {
 
           {/* Tallo con más hojas */}
           <div className="flower__line">
-            {Array.from({ length: flowerNum <= 3 ? 8 : 6 }, (_, i) => (
+            {Array.from({ length: flowerNum <= 3 ? 6 : 6 }, (_, i) => (
               <div key={i} className={`flower__line__leaf flower__line__leaf--${i + 1}`}></div>
             ))}
           </div>
